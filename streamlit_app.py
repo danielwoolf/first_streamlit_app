@@ -28,10 +28,10 @@ streamlit.dataframe(fruits_to_show)
 #fucntion
 def get_fruityvice_data(this_fruit_choice):
    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
-    # flatten the json into datfarme
-    fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-    # Display a dataframe as an interactive table.
-    return fruityvice_normalized
+   # flatten the json into datfarme
+   fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+   # Display a dataframe as an interactive table.
+   return fruityvice_normalized
                         
                         
 #New section to display fruityvice api response
